@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limited Defense - Strategic Tower Defense Game | Play Online</title>
+    <meta name="description" content="Play Limited Defense online - A challenging strategic tower defense game where every decision matters. Defend your base, upgrade towers, and survive waves of enemies.">
+    <meta name="keywords" content="Limited Defense, tower defense game, strategy game, online game, defense game">
+    <link rel="canonical" href="https://limiteddefense.org" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="games.js"></script>
+    <script src="js/utils.js"></script>
+    <style>
+        :root {
+            --primary-color: #1E40AF;
+            --secondary-color: #60A5FA;
+            --accent-color: #DBEAFE;
+            --text-color: #1F2937;
+        }
+        /* Add transition for mobile menu */
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+        #mobile-menu.hidden {
+            transform: translateX(-100%);
+        }
+    </style>
+</head>
+<body class="bg-blue-50 text-gray-800">
+    <header class="bg-blue-900 text-white shadow-lg">
+        <!-- Navigation -->
+        <nav class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="/" class="text-2xl font-bold">Limited Defense</a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="/games" class="text-white hover:text-blue-200 transition">Games</a>
+                    <div class="relative group">
+                        <button class="text-white hover:text-blue-200 transition">Categories</button>
+                        <div class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg hidden group-hover:block">
+                            <div class="py-1">
+                                <a href="/category/tower-defense" class="block px-4 py-2 text-gray-800 hover:bg-blue-100">Tower Defense</a>
+                                <a href="/category/strategy" class="block px-4 py-2 text-gray-800 hover:bg-blue-100">Strategy</a>
+                                <a href="/category/action" class="block px-4 py-2 text-gray-800 hover:bg-blue-100">Action</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/new-games" class="text-white hover:text-blue-200 transition">New Games</a>
+                    <a href="/popular" class="text-white hover:text-blue-200 transition">Popular</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="/" class="block px-3 py-2 rounded-md text-white bg-blue-800">Home</a>
+                    <a href="/games" class="block px-3 py-2 rounded-md text-white hover:bg-blue-800">Games</a>
+                    <a href="/category/tower-defense" class="block px-3 py-2 rounded-md text-white hover:bg-blue-800">Tower Defense</a>
+                    <a href="/category/strategy" class="block px-3 py-2 rounded-md text-white hover:bg-blue-800">Strategy</a>
+                    <a href="/new-games" class="block px-3 py-2 rounded-md text-white hover:bg-blue-800">New Games</a>
+                    <a href="/popular" class="block px-3 py-2 rounded-md text-white hover:bg-blue-800">Popular</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Search Bar Section -->
+        <div class="py-4">
+            <div class="container mx-auto px-4">
+                <div class="max-w-2xl mx-auto">
+                    <div class="flex">
+                        <input type="text" 
+                               placeholder="Search for defense games..." 
+                               class="w-full px-6 py-3 rounded-l-lg focus:outline-none text-gray-800 text-lg"
+                        >
+                        <button class="bg-blue-600 px-8 py-3 rounded-r-lg hover:bg-blue-500 transition duration-200 flex items-center">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                            <span class="ml-2">Search</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="container mx-auto px-4 py-8">
+            <h1 class="text-4xl font-bold text-center">Limited Defense</h1>
+            <p class="text-xl text-center mt-2 text-blue-200">Master the art of strategic defense in this challenging tower defense game</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Game Section -->
+        <section class="mb-12">
+            <div class="bg-white rounded-lg shadow-xl p-4">
+                <div class="aspect-w-16 aspect-h-9">
+                    <iframe src="https://www.crazygames.com/embed/limited-defense" 
+                            class="w-full h-[600px] rounded-lg"
+                            allow="fullscreen"
+                            frameborder="0"
+                            title="Limited Defense Game">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Games -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-blue-900">Related Games You Might Like</h2>
+            <div id="related-games" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Games will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- Game Overview -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-blue-900">Game Overview</h2>
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <p class="text-lg mb-4">
+                    Limited Defense is an engaging tower defense game that challenges your strategic thinking and resource management skills. Position your defenses wisely, upgrade your towers, and protect your base from increasingly difficult waves of enemies.
+                </p>
+            </div>
+        </section>
+
+        <!-- How to Play -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-blue-900">How to Play</h2>
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <ul class="list-disc list-inside space-y-3 text-lg">
+                    <li>Place towers strategically along the enemy path</li>
+                    <li>Manage your resources wisely to purchase and upgrade towers</li>
+                    <li>Adapt your strategy as new enemy types appear</li>
+                    <li>Survive increasingly challenging waves</li>
+                    <li>Upgrade your defenses to become more powerful</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-blue-900">Game Features</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-800">Strategic Gameplay</h3>
+                    <p>Every decision matters in Limited Defense. Choose your tower placement carefully and plan your upgrades to create the ultimate defense system.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-800">Multiple Tower Types</h3>
+                    <p>Experiment with different tower combinations to find the perfect strategy. Each tower type has unique abilities and upgrade paths.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-800">Progressive Difficulty</h3>
+                    <p>Face increasingly challenging waves of enemies that will test your tactical skills and adaptability.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-800">Resource Management</h3>
+                    <p>Balance your economy between building new towers and upgrading existing ones to maximize your defensive potential.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-blue-900 text-white py-6 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Limited Defense. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 初始化移动端菜单
+        initializeMobileMenu('mobile-menu-button', 'mobile-menu');
+
+        // 初始化搜索功能
+        initializeSearch('input[type="text"]', 'button.bg-blue-600', 'related-games');
+
+        // 页面加载时显示相关游戏
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentGameId = 1; // 当前游戏的ID
+            const relatedGames = getRelatedGames(currentGameId);
+            renderGameGrid(relatedGames, 'related-games');
+        });
+    </script>
+</body>
+</html> 
