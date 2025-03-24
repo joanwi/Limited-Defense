@@ -1,69 +1,39 @@
 const games = [
     {
         id: 1,
-        title: "Medieval Defense",
-        description: "Defend your castle with medieval towers and units against waves of enemies.",
-        image: "https://imgs2.dab3games.com/medieval-defense-game.png",
+        title: "Limited Defense",
+        description: "Master the art of strategic defense in this challenging tower defense game",
+        image: "./images/limited-defense.png",
         category: "Tower Defense",
-        url: "/games/medieval-defense"
+        url: "/"
     },
     {
         id: 2,
-        title: "Castle Defense",
-        description: "Strategic tower placement game with unique castle defense mechanics.",
-        image: "https://imgs2.dab3games.com/castle-defense-game.jpg",
-        category: "Strategy",
-        url: "/games/castle-defense"
+        title: "Iron Towers Alliance",
+        description: "Build powerful iron fortresses and forge alliances to defend against overwhelming enemy forces.",
+        image: "./images/iron-towers-alliance.png",
+        category: "Tower Defense",
+        url: "/iron-towers-alliance"
     },
     {
         id: 3,
-        title: "Magic Defense",
-        description: "Use magical towers and spells to defend against dark forces.",
-        image: "https://imgs2.dab3games.com/magic-defense-game.jpg",
-        category: "Magic",
-        url: "/games/magic-defense"
+        title: "Tower Swap",
+        description: "A unique tower defense game where you can swap tower positions to create the perfect defense strategy.",
+        image: "./images/tower-swap.png",
+        category: "Tower Defense",
+        url: "/tower-swap"
     },
     {
         id: 4,
-        title: "Defense Legends",
-        description: "Epic tower defense with legendary heroes and powerful abilities.",
-        image: "https://imgs2.dab3games.com/defense-legends-game.jpg",
-        category: "RPG Defense",
-        url: "/games/defense-legends"
-    },
-    {
-        id: 5,
-        title: "Space Defense",
-        description: "Protect your space station from alien invasions with advanced technology.",
-        image: "https://imgs2.dab3games.com/space-defense-game.jpg",
-        category: "Sci-fi Defense",
-        url: "/games/space-defense"
-    },
-    {
-        id: 6,
-        title: "Kingdom Rush",
-        description: "Classic tower defense game with stunning graphics and epic battles.",
-        image: "https://imgs2.dab3games.com/kingdom-rush-game.jpg",
-        category: "Tower Defense",
-        url: "/games/kingdom-rush"
-    },
-    {
-        id: 7,
-        title: "Zombie Defense",
-        description: "Survive the zombie apocalypse by building strategic defenses.",
-        image: "https://imgs2.dab3games.com/zombie-defense-game.jpg",
-        category: "Survival Defense",
-        url: "/games/zombie-defense"
-    },
-    {
-        id: 8,
-        title: "Plant Defense",
-        description: "Use various plants to defend your garden from invading pests.",
-        image: "https://imgs2.dab3games.com/plant-defense-game.jpg",
-        category: "Casual Defense",
-        url: "/games/plant-defense"
+        title: "Snake Shooter",
+        description: "Control a deadly snake and shoot your way through waves of enemies in this action-packed defense game.",
+        image: "./images/snake-shooter.png",
+        category: "Action Defense",
+        url: "/snake-shooter"
     }
 ];
+
+
 
 // 获取相关游戏的函数
 function getRelatedGames(currentGameId, limit = 4) {
