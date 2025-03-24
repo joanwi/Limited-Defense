@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snake Shooter - Action-Packed Defense Game | Play Online</title>
-    <meta name="description" content="Play Snake Shooter online - Control a deadly snake and shoot your way through waves of enemies in this action-packed defense game that combines shooting with snake movement mechanics.">
-    <meta name="keywords" content="Snake Shooter, snake game, shooter game, defense game, action game, online game">
+    <title>Snake Shooter - Tower Defense Game | Play Online</title>
+    <meta name="description" content="Play Snake Shooter online - A unique tower defense game where you control a snake to defend against waves of enemies. Upgrade your snake's abilities and survive!">
+    <meta name="keywords" content="Snake Shooter, tower defense, snake game, strategy game, online game, defense game">
     <link rel="canonical" href="https://limiteddefense.org/snake-shooter" />
-    <meta property="og:title" content="Snake Shooter - Action-Packed Defense Game | Play Online">
-    <meta property="og:description" content="Control a deadly snake and shoot your way through waves of enemies in this action-packed defense game.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta property="og:title" content="Snake Shooter - Tower Defense Game | Play Online">
+    <meta property="og:description" content="A unique tower defense game where you control a snake to defend against waves of enemies. Upgrade your snake's abilities and survive!">
     <meta property="og:url" content="https://limiteddefense.org/snake-shooter">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="games.js"></script>
     <script src="js/utils.js"></script>
+    <script src="js/header.js"></script>
     <style>
         :root {
             --primary-color: #1E40AF;
@@ -32,72 +34,20 @@
     </style>
 </head>
 <body class="bg-blue-50 text-gray-800">
-    <header class="bg-blue-900 text-white shadow-lg">
-        <!-- Navigation -->
-        <nav class="container mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                <!-- Logo -->
-                <div class="flex items-center">
-                    <a href="/" class="text-2xl font-bold">Limited Defense</a>
-                </div>
-                <!-- Desktop Navigation -->
-                <div class="hidden md:flex space-x-8">
-                    <a href="/defense-games" class="text-white hover:text-blue-200 transition">Defense Games</a>
-                    <a href="/iron-towers-alliance" class="text-white hover:text-blue-200 transition">New Games</a>
-                    <a href="/popular" class="text-white hover:text-blue-200 transition">Popular</a>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden">
-                <div class="px-2 pt-2 pb-3 space-y-1">
-                    <a href="/" class="block px-3 py-2 rounded-md text-white hover:bg-blue-800">Home</a>
-                    <a href="/defense-games" class="block px-3 py-2 rounded-md text-white hover:bg-blue-800">Defense Games</a>
-                    <a href="/iron-towers-alliance" class="block px-3 py-2 rounded-md text-white hover:bg-blue-800">New Games</a>
-                    <a href="/popular" class="block px-3 py-2 rounded-md text-white hover:bg-blue-800">Popular</a>
-                </div>
-            </div>
-        </nav>
-
-        <!-- Search Bar Section -->
-        <div class="py-4">
-            <div class="container mx-auto px-4">
-                <div class="max-w-2xl mx-auto">
-                    <div class="flex">
-                        <input type="text" 
-                               placeholder="Search for defense games..." 
-                               class="w-full px-6 py-3 rounded-l-lg focus:outline-none text-gray-800 text-lg"
-                        >
-                        <button class="bg-blue-600 px-8 py-3 rounded-r-lg hover:bg-blue-500 transition duration-200 flex items-center">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                            </svg>
-                            <span class="ml-2">Search</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Hero Section -->
-        <div class="container mx-auto px-4 py-8">
-            <h1 class="text-4xl font-bold text-center">Snake Shooter</h1>
-            <p class="text-xl text-center mt-2 text-blue-200">Control a deadly snake and shoot down enemies in this action-packed defense game</p>
-        </div>
-    </header>
+    <script>
+        // Initialize header when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeHeader();
+            setPageTitle('Snake Shooter', 'A unique tower defense game where you control a snake to defend against waves of enemies');
+        });
+    </script>
 
     <main class="container mx-auto px-4 py-8">
         <!-- Game Section -->
         <section class="mb-12">
             <div class="bg-white rounded-lg shadow-xl p-4">
                 <div class="aspect-w-16 aspect-h-9">
-                    <iframe src="https://www.crazygames.com/embed/snake-shooter-cbu" 
+                    <iframe src="https://www.crazygames.com/embed/snake-shooter" 
                             class="w-full h-[600px] rounded-lg"
                             allow="fullscreen"
                             frameborder="0"
@@ -120,10 +70,10 @@
             <h2 class="text-3xl font-bold mb-6 text-blue-900">Game Overview</h2>
             <div class="bg-white rounded-lg shadow-lg p-6">
                 <p class="text-lg mb-4">
-                    Snake Shooter combines the classic snake gameplay with shooting mechanics to create an exciting action-defense experience. You control a snake that grows longer as you progress, but unlike traditional snake games, you're armed with powerful weapons to shoot down enemies that approach from all directions.
+                    Snake Shooter is a unique twist on the classic tower defense genre. Instead of placing static towers, you control a powerful snake that can move around the battlefield, shooting at enemies and collecting power-ups. The game combines the strategic elements of tower defense with the dynamic movement of snake games.
                 </p>
                 <p class="text-lg">
-                    As you navigate through increasingly difficult levels, you'll need to balance movement strategy with shooting precision. The longer your snake becomes, the more powerful your attacks can be, but also the harder it becomes to avoid obstacles and enemy fire. Master both aspects to dominate this unique defensive shooter.
+                    As you progress through the levels, you'll face increasingly challenging waves of enemies. Use your snake's mobility to your advantage, dodge enemy attacks, and strategically position yourself to take out the most dangerous threats. Upgrade your snake's abilities to become even more powerful and survive the toughest challenges.
                 </p>
             </div>
         </section>
@@ -134,11 +84,11 @@
             <div class="bg-white rounded-lg shadow-lg p-6">
                 <ul class="list-disc list-inside space-y-3 text-lg">
                     <li>Use arrow keys or WASD to control your snake's movement</li>
-                    <li>Click or use spacebar to shoot at enemies</li>
-                    <li>Collect power-ups to enhance your shooting abilities</li>
-                    <li>Avoid hitting walls, obstacles, or your own body</li>
-                    <li>Defeat enemy waves to progress to more challenging levels</li>
-                    <li>Manage your snake's length: longer means more powerful but harder to control</li>
+                    <li>Click or press space to shoot at enemies</li>
+                    <li>Collect power-ups to enhance your snake's abilities</li>
+                    <li>Upgrade your snake's stats between waves</li>
+                    <li>Survive as long as possible against increasingly difficult waves</li>
+                    <li>Master the art of movement and shooting</li>
                 </ul>
             </div>
         </section>
@@ -148,20 +98,20 @@
             <h2 class="text-3xl font-bold mb-6 text-blue-900">Game Features</h2>
             <div class="grid md:grid-cols-2 gap-6">
                 <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="text-xl font-semibold mb-3 text-blue-800">Dual Gameplay Mechanics</h3>
-                    <p>Master both snake movement and shooting mechanics in this unique hybrid that challenges your multitasking skills.</p>
+                    <h3 class="text-xl font-semibold mb-3 text-blue-800">Dynamic Movement</h3>
+                    <p>Control your snake freely around the battlefield, dodging enemy attacks and positioning yourself for the perfect shot.</p>
                 </div>
                 <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="text-xl font-semibold mb-3 text-blue-800">Progressive Difficulty</h3>
-                    <p>Face increasingly challenging enemy waves with unique movement patterns and attack strategies as you advance.</p>
+                    <h3 class="text-xl font-semibold mb-3 text-blue-800">Power-up System</h3>
+                    <p>Collect various power-ups that enhance your snake's abilities, from increased damage to special attacks.</p>
                 </div>
                 <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="text-xl font-semibold mb-3 text-blue-800">Weapon Upgrades</h3>
-                    <p>Collect various power-ups to enhance your shooting capabilities, from spread shots to explosive bullets.</p>
+                    <h3 class="text-xl font-semibold mb-3 text-blue-800">Upgrade System</h3>
+                    <p>Between waves, upgrade your snake's stats to become more powerful and better equipped for the challenges ahead.</p>
                 </div>
                 <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="text-xl font-semibold mb-3 text-blue-800">Growth Strategy</h3>
-                    <p>Strategically manage your snake's length, balancing between increased firepower and maneuverability challenges.</p>
+                    <h3 class="text-xl font-semibold mb-3 text-blue-800">Multiple Enemy Types</h3>
+                    <p>Face different types of enemies, each with unique behaviors and weaknesses that require different strategies to defeat.</p>
                 </div>
             </div>
         </section>
@@ -174,16 +124,9 @@
     </footer>
 
     <script>
-        // 初始化移动端菜单
-        initializeMobileMenu('mobile-menu-button', 'mobile-menu');
-
-        // 初始化搜索功能
-        initializeSearch('input[type="text"]', 'button.bg-blue-600', 'related-games');
-
-        // 页面加载时显示相关游戏
         document.addEventListener('DOMContentLoaded', () => {
-            const currentGameId = 4; // Snake Shooter 的ID
-            const relatedGames = getRelatedGames(currentGameId, 16); // 获取16个相关游戏，填满两行
+            const currentGameId = 1; 
+            const relatedGames = getRelatedGames(currentGameId, 16); 
             renderGameGrid(relatedGames, 'related-games');
         });
     </script>

@@ -28,29 +28,69 @@ const games = [
         title: "Snake Shooter",
         description: "Control a deadly snake and shoot your way through waves of enemies in this action-packed defense game.",
         image: "./images/snake-shooter.png",
-        category: "Action Defense",
+        category: "Tower Defense",
         url: "/snake-shooter"
+    },
+    {
+        id: 5,
+        title: "Defender Idle 2",
+        description: "Build and upgrade your defenses while earning resources automatically in this addictive idle tower defense game.",
+        image: "./images/defender-idle-2.png",
+        category: "Tower Defense",
+        url: "/defender-idle-2"
+    },
+    {
+        id: 6,
+        title: "Bloons Tower Defense 4",
+        description: "Classic tower defense game where you pop balloons with various monkey towers. Strategize and upgrade your defenses to stop the colorful balloon invasion!",
+        image: "./images/bloons-tower-defense-4.png",
+        category: "Tower Defense",
+        url: "/bloons-tower-defense-4"
+    },
+    {
+        id: 7,
+        title: "Art of Defense",
+        description: "Master the art of strategic defense in this visually stunning tower defense game. Place and upgrade your towers to create the perfect defense against waves of enemies.",
+        image: "./images/art-of-defense.png",
+        category: "Tower Defense",
+        url: "/art-of-defense"
+    },
+    {
+        id: 8,
+        title: "World Z Defense",
+        description: "Survive the zombie apocalypse in this thrilling tower defense game. Build and upgrade your defenses to protect humanity from the undead hordes.",
+        image: "./images/world-z-defense.png",
+        category: "Tower Defense",
+        url: "/world-z-defense"
+    },
+    {
+        id: 9,
+        title: "Tower vs Goblins",
+        description: "Defend your kingdom against invading goblins in this exciting tower defense game. Build and upgrade your towers to protect your territory from the relentless goblin hordes.",
+        image: "./images/tower-vs-goblins.png",
+        category: "Tower Defense",
+        url: "/tower-vs-goblins"
     }
 ];
 
 
 
-// 获取相关游戏的函数
-function getRelatedGames(currentGameId, limit = 4) {
+
+function getRelatedGames(currentGameId, limit) {
     return games
-        .filter(game => game.id !== currentGameId) // 排除当前游戏
-        .sort(() => Math.random() - 0.5) // 随机排序
-        .slice(0, limit); // 限制返回数量
+        .filter(game => game.id !== currentGameId) 
+        .sort(() => Math.random() - 0.5) // random
+        .slice(0, limit); 
 }
 
-// 按分类获取游戏
-function getGamesByCategory(category, limit = 4) {
+
+function getGamesByCategory(category, limit) {
     return games
         .filter(game => game.category === category)
         .slice(0, limit);
 }
 
-// 搜索游戏
+
 function searchGames(query) {
     query = query.toLowerCase();
     return games.filter(game => 
