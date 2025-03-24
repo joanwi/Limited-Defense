@@ -90,7 +90,6 @@ function getGamesByCategory(category, limit) {
         .slice(0, limit);
 }
 
-
 function searchGames(query) {
     query = query.toLowerCase();
     return games.filter(game => 
