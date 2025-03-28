@@ -70,6 +70,30 @@ const games = [
         image: "./images/tower-vs-goblins.png",
         category: "Tower Defense",
         url: "/tower-vs-goblins"
+    },
+    {
+        id: 10,
+        title: "Age of Tanks Warriors: TD War",
+        description: "Command powerful tanks in this strategic tower defense game",
+        image: "./images/age-of-tanks-warriors-td-war.png",
+        category: "Tower Defense",
+        url: "/age-of-tanks-warriors-td-war"
+    },
+    {
+        id: 11,
+        title: "Kingdom Rush",
+        description: "The classic tower defense game where you defend your kingdom against waves of enemies. Build and upgrade your towers to protect your territory.",
+        image: "./images/kingdom-rush.png",
+        category: "Tower Defense",
+        url: "/kingdom-rush"
+    },
+    {
+        id: 12,
+        title: "Raid Heroes: Total War",
+        description: "Command powerful heroes in this strategic tower defense game. Build and upgrade your defenses to protect your territory from waves of enemies.",
+        image: "./images/raid-heroes-total-war.png",
+        category: "Tower Defense",
+        url: "/raid-heroes-total-war"
     }
 ];
 
